@@ -4,6 +4,8 @@ Boilerplate project containing build and deployment scripts for a Python docker 
 
 Note that this supersedes the [lambda-container](https://github.com/vbalasu/lambda-container) template.
 
+IMPORTANT NOTE: You must build the docker image on a Linux machine. If you build it on a Mac with an M1/M2 chip, it is incompatible with AWS Lambda, and you will get "exec format error"
+
 Contents of the project are as follows:
 
 1. [app.py](app.py)
