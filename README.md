@@ -8,8 +8,6 @@ IMPORTANT LIMITATION: Note that this function will not on functions that are beh
 
 Since the databricks-sql-connector library is too large for a traditional chalice/lambda application, it is deployed using a docker container.
 
-IMPORTANT NOTE: You must build the docker image on a Linux machine. If you build it on a Mac with an M1/M2 chip, it is incompatible with AWS Lambda, and you will get "exec format error"
-
 Contents of the project are as follows:
 
 1. [app.py](app.py)
