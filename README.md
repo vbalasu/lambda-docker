@@ -1,8 +1,12 @@
-# lambda-docker
+# databricks-sql-query
 
-Boilerplate project containing build and deployment scripts for a Python docker container image launched to AWS Lambda. This includes the steps to build and upload the image to ECR and create/update a Lambda function based on it.
+Lambda function to query Databricks SQL.
 
-Note that this supersedes the [lambda-container](https://github.com/vbalasu/lambda-container) template.
+This function uses databricks-sql-connector to connect to a running Databricks SQL endpoint, submit a SQL query and fetch the results. 
+
+IMPORTANT LIMITATION: Note that this function will not on functions that are behind a network firewall. 
+
+Since the databricks-sql-connector library is too large for a traditional chalice/lambda application, it is deployed using a docker container.
 
 Contents of the project are as follows:
 
@@ -15,3 +19,5 @@ Contents of the project are as follows:
 7. [4_push.sh](4_push.sh)
 8. [5_create_function.sh](5_create_function.sh)
 9. [5_update_function.sh](5_update_function.sh)
+
+The project was built using the [lambda-docker boilerplate](https://github.com/vbalasu/lambda-docker)
