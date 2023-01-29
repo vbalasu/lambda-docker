@@ -1,1 +1,1 @@
-docker build -t databricks-sql-query .    
+docker build -t hello-world .    
